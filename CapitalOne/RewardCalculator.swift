@@ -49,7 +49,7 @@ class RewardCalculator {
         return merchantTotals
     }
     
-    // Calculate total points based on reward rules and merchant totals
+    // Using Dynamic programming to maximize the total number of points (maximize points earned per dollar spent at every step of optimization)
     private static func calculatePoints(merchantTotals: [Merchant: Int]) -> Int {
         // Define reward rules
         let rules = [
