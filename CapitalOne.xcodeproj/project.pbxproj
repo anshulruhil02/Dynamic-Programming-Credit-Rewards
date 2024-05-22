@@ -17,6 +17,7 @@
 		F319D2842BFD3D0800B0959C /* TransactionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F319D2832BFD3D0800B0959C /* TransactionModels.swift */; };
 		F319D2862BFD3D6600B0959C /* RewardCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F319D2852BFD3D6600B0959C /* RewardCalculator.swift */; };
 		F319D2882BFEAB1A00B0959C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F319D2872BFEAB1A00B0959C /* README.md */; };
+		F319D28F2BFEADAA00B0959C /* RewardCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F319D28E2BFEADAA00B0959C /* RewardCalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,8 @@
 		F319D2762BFD3A7300B0959C /* CapitalOneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapitalOneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F319D2832BFD3D0800B0959C /* TransactionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModels.swift; sourceTree = "<group>"; };
 		F319D2852BFD3D6600B0959C /* RewardCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCalculator.swift; sourceTree = "<group>"; };
-		F319D2872BFEAB1A00B0959C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F319D2872BFEAB1A00B0959C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = CapitalOne/README.md; sourceTree = "<group>"; };
+		F319D28E2BFEADAA00B0959C /* RewardCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		F319D24C2BFD3A7100B0959C = {
 			isa = PBXGroup;
 			children = (
+				F319D2872BFEAB1A00B0959C /* README.md */,
 				F319D2572BFD3A7100B0959C /* CapitalOne */,
 				F319D2692BFD3A7300B0959C /* CapitalOneTests */,
 				F319D2732BFD3A7300B0959C /* CapitalOneUITests */,
@@ -108,7 +111,6 @@
 				F319D25F2BFD3A7200B0959C /* Preview Content */,
 				F319D2832BFD3D0800B0959C /* TransactionModels.swift */,
 				F319D2852BFD3D6600B0959C /* RewardCalculator.swift */,
-				F319D2872BFEAB1A00B0959C /* README.md */,
 			);
 			path = CapitalOne;
 			sourceTree = "<group>";
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				F319D26A2BFD3A7300B0959C /* CapitalOneTests.swift */,
+				F319D28E2BFEADAA00B0959C /* RewardCalculatorTests.swift */,
 			);
 			path = CapitalOneTests;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 					};
 					F319D2652BFD3A7300B0959C = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 						TestTargetID = F319D2542BFD3A7100B0959C;
 					};
 					F319D26F2BFD3A7300B0959C = {
@@ -280,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F319D28F2BFEADAA00B0959C /* RewardCalculatorTests.swift in Sources */,
 				F319D26B2BFD3A7300B0959C /* CapitalOneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +509,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TPSDBQUPSC;
@@ -516,6 +522,8 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "CapitalOneTests/CapitalOneTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CapitalOne.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CapitalOne";
@@ -527,6 +535,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TPSDBQUPSC;
@@ -539,6 +548,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "CapitalOneTests/CapitalOneTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CapitalOne.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CapitalOne";
