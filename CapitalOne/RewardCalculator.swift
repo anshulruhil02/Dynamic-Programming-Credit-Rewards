@@ -20,12 +20,14 @@ struct RewardRule {
     let spends: [Merchant: Int]
 }
 
+
 class RewardCalculator {
     
     // Function to calculate rewards for a list of transactions
     static func calculateRewards(transactions: [Transaction]) -> MonthlyRewards {
-        // Dictionary to store total amounts spent per merchant
+        // Combine transactions by merchant and calculate total amount spent for each merchant
         let merchantTotals = combineTransactions(transactions)
+        print("Merchant Totals: \(merchantTotals)")
         
         // Calculate total points using reward rules
         let totalPoints = calculatePoints(merchantTotals: merchantTotals)
@@ -33,11 +35,12 @@ class RewardCalculator {
         // Create an empty rewards list (can be filled with actual reward objects if needed)
         let rewards: [RewardPoints] = []
         
+        print("Total Points: \(totalPoints)")
         return MonthlyRewards(totalPoints: totalPoints, rewards: rewards)
     }
     
     // Combine transactions by merchant and calculate total amount spent for each merchant
-    private static func combineTransactions(_ transactions: [Transaction]) -> [Merchant: Int] {
+    static func combineTransactions(_ transactions: [Transaction]) -> [Merchant: Int] {
         var merchantTotals: [Merchant: Int] = [:]
         
         for transaction in transactions {
@@ -50,7 +53,7 @@ class RewardCalculator {
     }
     
     // Using Dynamic programming to maximize the total number of points (maximize points earned per dollar spent at every step of optimization)
-    private static func calculatePoints(merchantTotals: [Merchant: Int]) -> Int {
+    static func calculatePoints(merchantTotals: [Merchant: Int]) -> Int {
         // Define reward rules
         let rules = [
             RewardRule(points: 500, spends: [.sportcheck: 75, .timHortons: 25, .subway: 25]),  // Rule 1
@@ -66,15 +69,20 @@ class RewardCalculator {
         
         // Convert amounts to dollars
         var merchantAmounts = merchantTotals.mapValues { $0 / 100 }
+        print("Merchant Amounts (in dollars): \(merchantAmounts)")
         
         // Apply reward rules to calculate total points
         var totalPoints = 0
         for rule in sortedRules {
-            totalPoints += applyRule(rule, to: &merchantAmounts)
+            let pointsFromRule = applyRule(rule, to: &merchantAmounts)
+            //print("Applied Rule: \(rule), Points Earned: \(pointsFromRule), Remaining Merchant Amounts: \(merchantAmounts)")
+            totalPoints += pointsFromRule
         }
         
         // Rule 7: 1 point for every $1 spent for all other purchases
-        totalPoints += merchantAmounts.values.reduce(0, +)
+        let remainingPoints = merchantAmounts.values.reduce(0, +)
+        totalPoints += remainingPoints
+        print("Points from Remaining Amounts (Rule 7): \(remainingPoints)")
         
         return totalPoints
     }

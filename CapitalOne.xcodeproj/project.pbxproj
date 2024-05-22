@@ -16,7 +16,6 @@
 		F319D2772BFD3A7300B0959C /* CapitalOneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F319D2762BFD3A7300B0959C /* CapitalOneUITestsLaunchTests.swift */; };
 		F319D2842BFD3D0800B0959C /* TransactionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F319D2832BFD3D0800B0959C /* TransactionModels.swift */; };
 		F319D2862BFD3D6600B0959C /* RewardCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F319D2852BFD3D6600B0959C /* RewardCalculator.swift */; };
-		F319D2882BFEAB1A00B0959C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F319D2872BFEAB1A00B0959C /* README.md */; };
 		F319D28F2BFEADAA00B0959C /* RewardCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F319D28E2BFEADAA00B0959C /* RewardCalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +50,6 @@
 		F319D2762BFD3A7300B0959C /* CapitalOneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapitalOneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F319D2832BFD3D0800B0959C /* TransactionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModels.swift; sourceTree = "<group>"; };
 		F319D2852BFD3D6600B0959C /* RewardCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCalculator.swift; sourceTree = "<group>"; };
-		F319D2872BFEAB1A00B0959C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = CapitalOne/README.md; sourceTree = "<group>"; };
 		F319D28E2BFEADAA00B0959C /* RewardCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +81,6 @@
 		F319D24C2BFD3A7100B0959C = {
 			isa = PBXGroup;
 			children = (
-				F319D2872BFEAB1A00B0959C /* README.md */,
 				F319D2572BFD3A7100B0959C /* CapitalOne */,
 				F319D2692BFD3A7300B0959C /* CapitalOneTests */,
 				F319D2732BFD3A7300B0959C /* CapitalOneUITests */,
@@ -246,7 +243,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F319D2882BFEAB1A00B0959C /* README.md in Resources */,
 				F319D2612BFD3A7200B0959C /* Preview Assets.xcassets in Resources */,
 				F319D25D2BFD3A7200B0959C /* Assets.xcassets in Resources */,
 			);
