@@ -4,12 +4,9 @@
 This project is a SwiftUI application that calculates credit card rewards based on user transactions. The application allows users to input transactions, view total reward points, and see a list of all transactions.
 
 
-## Usage
-- **Select a Merchant**: Choose a merchant from the picker.
-- **Enter Amount Spent**: Input the amount spent at the selected merchant.
-- **Add Transaction**: Click the "Add Transaction" button to add the transaction.
-- **Calculate Rewards**: Click the "Calculate Rewards" button to calculate the total points.
-- **View Transactions**: Click the "View Transactions" button to see a list of all transactions.
+
+https://github.com/anshulruhil02/Dynamic-Programming-Credit-Rewards/assets/92406374/fc61b6e5-4f23-4340-8548-687c6f009d94
+
 
 ## Business Logic
 ### Dynamic Programming Approach to Calculating Reward Points
