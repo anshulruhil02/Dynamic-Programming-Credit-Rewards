@@ -1,7 +1,7 @@
 
 
 ## Project Overview
-This project is a SwiftUI application that calculates credit card rewards based on user transactions. The application allows users to input transactions, view total reward points, and see a list of all transactions.
+This project is a SwiftUI application that calculates the maximum credit card rewards possible based on user transactions. The application allows users to input transactions, view total reward points, and see a list of all transactions.
 
 
 
